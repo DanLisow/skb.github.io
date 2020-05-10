@@ -1,0 +1,1078 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/side-block.css">
+    <link rel="shortcut icon" href="img/logo.svg">
+    <title>СКБ-ЛАБ</title>
+</head>
+
+<body>
+
+    <!-- ========= БЛОК ВСЕЯ РУСИ =========== -->
+    <div class="main-container tab-content">
+
+        <!-- Боковая панель -->
+        <div class="left__side-block">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a href="#" class="nav-link" style="opacity: 1;"><img src="img/logo.svg" alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#main-block__first" data-toggle="tab" class="nav-link active"><img src="img/user.svg"
+                            alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#main-block__second" data-toggle="tab" class="nav-link"><img src="img/question.svg"
+                            alt=""></a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-toggle="modal" data-target="#add-employee"
+                        style="opacity: 1;"><img src="img/add-user.svg" alt=""></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="modal fade" id="add-employee" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span class="add">Добавить нового сотрудника</span>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="" method="GET">
+                            <div class="surname">
+                                <span>Фамилия</span>
+                                <input type="text" placeholder="Введите фамилию сотрудника" required>
+                            </div>
+                            <div class="name">
+                                <span>Имя</span>
+                                <input type="text" placeholder="Введите имя сотрудника" required>
+                            </div>
+                            <div class="slack">
+                                <span>Slack-id</span>
+                                <input type="text" placeholder="Slack-id сотрудника" required>
+                            </div>
+                            <button type="submit">
+                                <span>Добавить сотрудника</span>
+                                <img src="img/arrow-white.svg" alt="">
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================БЛОК, ВХОДЯЩИЙ В ПЕРВУЮ ИКОНКУ БОКОВОГО МЕНЮ================= -->
+        <div class="main-block tab-pane show fade active" id="main-block__first">
+
+            <!-- Блок с менюшкой -->
+            <nav class="main-block__menu">
+                <div class="main-block__menu-tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item active"><a href="#main-information" data-toggle="tab"
+                                class="nav-link active">Новые сотрудники</a></li>
+                        <li class="nav-item"><a href="#anketa" data-toggle="tab" class="nav-link">Прошедшие
+                                анкетирование</a></li>
+                    </ul>
+                </div>
+                <div class="main-block__menu-account">
+                    <a href="#" class="menu-account__bell"><img src="img/bell.svg" alt="" srcset=""></a>
+                    <span>Антон Глухов</span>
+                    <a href="#" class="menu-account__avatar"><img src="img/account.svg" alt="" srcset=""></a>
+                    <a href="#" class="menu-account__exit"><img src="img/exit.svg" alt=""></a>
+                </div>
+            </nav>
+
+            <!-- =========== Основной Контент ============== -->
+            <div class="tab-content">
+
+                <!-- ======================== Новые сотрудники ======================== -->
+                <!-- Блок с табличкой и сортировкой -->
+                <div class="main-information tab-pane show fade active" id="main-information">
+
+                    <!-- Чисто сортировка -->
+                    <div class="main-information__nav">
+                        <div class="main-information__nav-sort">
+                            Сортировать: <span>По Фамилии Имени (А-я)</span>
+                            <a href="#"><img src="/img/arrow.svg" alt=""></a>
+                        </div>
+                        <div class="main-information__nav-search">
+                            <input type="text" placeholder="Введите ФИО и дату начала...">
+                        </div>
+                    </div>
+
+                    <!-- Таблица с сотрудниками -->
+                    <div class="main-information__employees">
+
+                        <!-- Заголовки таблицы -->
+                        <div class="main-information__employees-table">
+                            <span>Сотрудник</span>
+                            <span>Начало работы</span>
+                            <span>Прогресс анкетирования</span>
+                            <span></span>
+                        </div>
+
+                        <div class="employee-wrapper">
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span class="employee-name"><a href="employee.html">Сорокин Александр</a></span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>0%</span>
+                                    <progress value="0" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>65%</span>
+                                    <progress value="65" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>99%</span>
+                                    <progress value="99" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>50%</span>
+                                    <progress value="50" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Сорокин Александр</span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>13%</span>
+                                    <progress value="13" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>65%</span>
+                                    <progress value="65" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>99%</span>
+                                    <progress value="99" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>50%</span>
+                                    <progress value="50" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Сорокин Александр</span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>0%</span>
+                                    <progress value="0" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>65%</span>
+                                    <progress value="65" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>99%</span>
+                                    <progress value="99" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>50%</span>
+                                    <progress value="50" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Сорокин Александр</span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>13%</span>
+                                    <progress value="13" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>65%</span>
+                                    <progress value="65" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>99%</span>
+                                    <progress value="99" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>75%</span>
+                                    <progress value="75" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-progress">
+                                    <span>50%</span>
+                                    <progress value="50" max="100"> </progress>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="pagination">
+                            <div class="pagination-list">
+                                <img src="img/arrow.svg" alt="">
+                                <span class="pagination-active">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>...</span>
+                                <span>99</span>
+                                <img src="img/arrow.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ======================== Прошедшие анкетирование ==================== -->
+                <div class="main-information tab-pane fade " id="anketa">
+                    <div class="main-information__nav">
+                        <div class="main-information__nav-sort">
+                            Сортировать: <span>По Фамилии Имени (А-я)</span>
+                            <a href="#"><img src="/img/arrow.svg" alt=""></a>
+                        </div>
+                        <div class="main-information__nav-search">
+                            <input type="text" placeholder="Введите ФИО и дату начала...">
+                        </div>
+                    </div>
+
+                    <!-- Таблица с сотрудниками -->
+                    <div class="main-information__employees">
+
+                        <!-- Заголовки таблицы -->
+                        <div class="main-information__employees-table">
+                            <span>Сотрудник</span>
+                            <span>Начало работы</span>
+                            <span>Прогресс анкетирования</span>
+                            <span></span>
+                        </div>
+
+                        <div class="employee-wrapper">
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block employee-active">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Сорокин Александр</span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-result">
+                                    <span>31.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block employee-active">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-result">
+                                    <span>31.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-result">
+                                    <span>16.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block ">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-result">
+                                    <span>01.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-result">
+                                    <span>22.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-result">
+                                    <span>10.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Сорокин Александр</span>
+                                </div>
+                                <span>31.03.2020</span>
+                                <div class="employee-result">
+                                    <span>31.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Овчинников Алексей</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-result">
+                                    <span>31.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Евдокимова Анастасия</span>
+                                </div>
+                                <span>16.03.2020</span>
+                                <div class="employee-result">
+                                    <span>16.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block ">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Подпрятов Владимир</span>
+                                </div>
+                                <span>01.03.2020</span>
+                                <div class="employee-result">
+                                    <span>01.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Духович Александра</span>
+                                </div>
+                                <span>22.03.2020</span>
+                                <div class="employee-result">
+                                    <span>22.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                            <!-- Сам сотрудник -->
+                            <div class="employee-block">
+                                <div class="employee">
+                                    <img src="/img/avatar.svg" alt="">
+                                    <span>Егоров Максим</span>
+                                </div>
+                                <span>10.03.2020</span>
+                                <div class="employee-result">
+                                    <span>10.03.2020</span>
+                                </div>
+                                <button class="employee-more">
+                                    <span>Подробнее</span>
+                                    <img src="/img/more.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <div class="pagination">
+                            <div class="pagination-list">
+                                <img src="img/arrow.svg" alt="">
+                                <span class="pagination-active">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <span>4</span>
+                                <span>...</span>
+                                <span>99</span>
+                                <img src="img/arrow.svg" alt="">
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- ================БЛОК, ВХОДЯЩИЙ ВО ВТОРУЮ ИКОНКУ БОКОВОГО МЕНЮ================= -->
+        <div class="main-block tab-pane fade" id="main-block__second">
+
+            <!-- Блок с менюшкой -->
+            <nav class="main-block__menu">
+                <div class="main-block__menu-tabs">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item active"><a href="#main-information" data-toggle="tab"
+                                class="nav-link active">Вопросы для адаптации</a></li>
+                    </ul>
+                </div>
+                <div class="main-block__menu-account">
+                    <a href="#" class="menu-account__bell"><img src="img/bell.svg" alt="" srcset=""></a>
+                    <span>Антон Глухов</span>
+                    <a href="#" class="menu-account__avatar"><img src="img/account.svg" alt="" srcset=""></a>
+                    <a href="#" class="menu-account__exit"><img src="img/exit.svg" alt=""></a>
+                </div>
+            </nav>
+
+            <!-- =========== Основной Контент ============== -->
+
+
+            <!-- ======================== Вопросы для адаптации ======================== -->
+            <!-- Блок с табличкой и сортировкой -->
+            <div class="main-information tab-pane show fade active">
+
+                <!-- Чисто сортировка -->
+                <div class="main-information__nav">
+                    <div class="main-information__nav-sort">
+                        Сортировать: <span>По интервалу отправки</span>
+                        <a href="#"><img src="/img/arrow.svg" alt=""></a>
+                    </div>
+                    <div class="main-information__nav-search">
+                        <input type="text" placeholder="Введите ФИО и дату начала...">
+                    </div>
+                </div>
+
+                <!-- Таблица с вопросами -->
+                <div class="main-information__employees">
+
+                    <!-- Заголовки таблицы -->
+                    <div class="main-information__questions-table">
+                        <span>День отправки</span>
+                        <span>Вопрос</span>
+                        <span></span>
+                    </div>
+
+                    <div class="question-wrapper">
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>1 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>2 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>5 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>7 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>10 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>11 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>1 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>2 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>5 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>7 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>10 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+                        <!-- Сам вопрос -->
+                        <div class="question-block">
+                            <span>11 день</span>
+                            <div class="question">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lectus id at sed sit turpis
+                                risus, in at et. In sit enimagotor...?
+                            </div>
+                            <div class="question-more">
+                                <a href="#"><img src="/img/pencil.svg" alt=""></a>
+                                <a href="#"><img src="/img/bin.svg" alt=""></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="pagination">
+                        <div class="pagination-list">
+                            <img src="img/arrow.svg" alt="">
+                            <span class="pagination-active">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <img src="img/arrow.svg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="js/buzina-pagination.min.js"></script>
+    <script src="js/pagination-first.js"></script>
+    <script src="js/pagination-second.js"></script>
+</body>
+
+</html>
