@@ -15,7 +15,7 @@ var accordion = function(){
         else{
             $(this).toggleClass("active");
         }
-        $(this).next(".accordion-body").not(":animated").slideToggle();
+        $(this).next(".accordion-body").slideToggle();
     });
 }
 
