@@ -115,7 +115,7 @@
     width: 270px;
     border-radius: 10px;
     outline: none;
-    background-image: url('/img/search.svg');
+    background-image: url('../img/search.svg');
     background-repeat: no-repeat;
     background-position: 20px center;
 }
@@ -136,7 +136,7 @@
     margin: 0 auto;
 }
 .modal-body{
-    background: url('/img/bg-add.svg') no-repeat;
+    background: url('../img/bg-add.svg') no-repeat;
     background-position: 100% center;
 }
 .close span{
